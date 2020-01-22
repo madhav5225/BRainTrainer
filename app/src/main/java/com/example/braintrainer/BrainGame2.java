@@ -35,14 +35,15 @@ public void start(View view){
     if(tc==0) {
         timer.start();
     tc=1;}
-    textView3.setText(""+n+"/"+t);
+    String ss=""+n+"/"+t;
+    textView3.setText(ss);
     p=new Random().nextInt(201*setLevel)+10;
     q=new Random().nextInt(201*setLevel)+10;
-    a=new Random().nextInt(401*setLevel)+20;
-    b=new Random().nextInt(401*setLevel)+20;
-    c=new Random().nextInt(401*setLevel)+20;
-    d=new Random().nextInt(401*setLevel)+20;
-    textView2.setText(""+p+"+"+""+q+"=");
+    a=p+q;
+    b=a+20;
+    c=a-10;
+    d=a+100;
+    textView2.setText(ss);
     ch=new Random().nextInt(4)+1;
    // Log.i("hh",""+ch);
    // Log.i("hh",""+(p+q));
@@ -50,31 +51,31 @@ public void start(View view){
    // Log.i("hh",""+z);
 if(ch==1)
 {
-    textView4.setText(""+(p+q));
+    textView4.setText(""+a);
     textView5.setText(""+b);
     textView6.setText(""+c);
     textView7.setText(""+d);
 }
     else if(ch==2)
     {
-        textView4.setText(""+a);
-        textView5.setText(""+(p+q));
+        textView4.setText(""+b);
+        textView5.setText(""+a);
         textView6.setText(""+c);
         textView7.setText(""+d);
     }
     else if(ch==3)
     {
-        textView4.setText(""+a);
+        textView4.setText(""+c);
         textView5.setText(""+b);
-        textView6.setText(""+(p+q));
+        textView6.setText(""+a);
         textView7.setText(""+d);
     }
     else if(ch==4)
     {
-        textView4.setText(""+a);
+        textView4.setText(""+d);
         textView5.setText(""+b);
         textView6.setText(""+c);
-        textView7.setText(""+(p+q));
+        textView7.setText(""+a);
     }
 
 }
